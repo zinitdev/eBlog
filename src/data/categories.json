@@ -1,0 +1,7 @@
+[
+	{ "id": 1, "slug": "technology", "name": "Technology" },
+	{ "id": 2, "slug": "health", "name": "Health" },
+	{ "id": 3, "slug": "education", "name": "Education" },
+	{ "id": 4, "slug": "sports", "name": "Sports" },
+	{ "id": 4, "slug": "entertainment", "name": "Entertainment" }
+]
