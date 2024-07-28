@@ -20,6 +20,18 @@ Run server
 yarn dev
 ```
 
+Migrate Database
+
+```bash
+yarn prisma migrate dev --name init
+```
+
+Seeding Database
+
+```bash
+npx prisma db seed
+```
+
 ## Author
 
 Copyright &copy; 2024 by [ZIN](http://www.github.com/zinitdev).

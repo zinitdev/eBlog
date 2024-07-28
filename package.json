@@ -2,19 +2,26 @@
   "name": "e-blog",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@prisma/client": "^5.17.0",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "next": "14.2.5",
+    "prisma": "^5.17.0",
     "react": "^18",
     "react-bootstrap": "^2.10.4",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "swr": "^2.2.5"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -22,6 +29,8 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }

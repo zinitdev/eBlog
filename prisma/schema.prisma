@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Post {
+  id         Int        @id @default(autoincrement())
+  created_at  DateTime   @default(now())
+  updated_at  DateTime   @updatedAt
+  slug  String @unique @db.VarChar(80)
+  title      String   @db.VarChar(80)
+  content String     @db.LongText
+  active  Boolean    @default(true)
+  category Category   @relation(fields: [category_id], references: [id])
+  category_id   Int
+}
+
+model Category {
+  id    Int    @id @default(autoincrement())
+  slug  String @unique @db.VarChar(80)
+  name  String @unique @db.VarChar(80)
+  active  Boolean    @default(true)
+  posts Post[]
+}
